@@ -1,0 +1,1 @@
+"use strict";var c=3;console.log("a",1),console.log("b",2);

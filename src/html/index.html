@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/test.css">
+</head>
+<body>
+<div>hello gulp</div>
+<p>hello hello hello hello hello hello</p>
+<img src="../images/minapp.png" alt="minapp">
+<script type="text/javascript">
+    var test = 1;
+    alert(test);
+    var getMyOrders = function (PageNum, type) {
+        var self = this;
+        var url = '/room/orders/me';
+        var session_key = this.userInfo.SessionKey;
+        var data = {
+            Orderby: 1,
+            PageNum: PageNum,
+            LimitSize: 10,
+            Type: 1 //1订我的房 2 我订的房
+        };
+        goAjax(session_key, data, url, function (result) {
+            self.setMyOrders(result.Data, type);
+        }, true);
+    }
+</script>
+<script src="../js/test.js"></script>
+<script src="../js/libs/jquery-1.12.1.min.js"></script>
+</body>
+</html>
