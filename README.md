@@ -88,6 +88,15 @@ $ npm install --save-dev gulp-minify-html
 
 ```
 
+### 创建相关的文件
+- 在项目目录下,创建名为'.babelrc'(Babel工具和模块的使用,都必须先写好.babelrc,),该文件用来设置转码规则和插件,内容如下:
+```
+{
+  "presets": ["es2015"]
+}
+```
+- 创建'gulpfile.js'文件
+
 ### gulpfile.js 内容如下
 ```
 var gulp = require("gulp");
